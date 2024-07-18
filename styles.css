@@ -1,0 +1,693 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#page1 {
+    background: linear-gradient(90deg, #cccccc, #ffffff); /* 从灰色到白色的渐变 */
+    animation: fadeInBg 2s ease-out;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+h1, h2, p, .btn, .gift-image {
+    opacity: 0;
+    animation: fadeInContent 1s ease-out forwards;
+}
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+h2 {
+    font-size: 3.5rem;
+    color: #4a4ae9;
+    margin-bottom: 20px;
+    animation-delay: 1s;
+}
+p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #666;
+    animation-delay: 1.5s;
+}
+.btn,
+.btn:focus {
+    position: relative;
+    min-width: 100px;
+    background: transparent;
+    color: #E1332D;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: inherit;
+    padding: 10px 20px;
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(225, 51, 45, 0);
+    outline: 1px solid !important;
+    outline-color: rgba(225, 51, 45, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn:hover {
+    color: #E1332D;
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(225, 51, 45, 0.5), 0 0 20px rgba(225, 51, 45, 0.2);
+    outline: 1px solid !important;
+    outline-color: rgba(225, 51, 45, 0) !important;
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+}
+.gift-image {
+    width: 100px;
+    margin-top: 20px;
+    animation-delay: 2.5s;
+}
+#page2 {
+    background-color: white;
+}
+
+#page2 .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.family-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #4a4ae9;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.experience-list {
+    text-align: left;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.experience-list li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a4ae9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+#page3 {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+#page3 .content {
+    display: flex;
+    flex-direction: column; /* 確保內容是垂直排列 */
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+.advantages {
+    margin-top: 20px;
+}
+.advantages h3 {
+    font-size: 1.5rem;
+    color: #4a4ae9;
+    margin-bottom: 10px;
+}
+.advantages .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+.main-title {
+    font-size: 3rem; /* 增大標題字體 */
+    color: #4a4ae9;
+    margin-bottom: 20px;
+}
+.intro-text {
+    font-size: 1rem;
+    color: #666;
+}
+.intro-section,
+.details-section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+h3 {
+    font-size: 1.5rem;
+    color: #4a4ae9;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.feature {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.feature h4 {
+    font-size: 1rem;
+    color: #4a4ae9;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    font-size: 0.9rem;
+    color: #666;
+}
+.disadvantages {
+    margin-top: 30px;
+}
+/* 第四頁樣式 */
+#page4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#page4 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#page4 .title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#page4 .subtitle {
+    font-size: 2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#page4 .intro-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+#page4 .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#page4 .grid-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+#page4 .grid-item h4 {
+    font-size: 1.2rem;
+    color: #4a4ae9;
+    margin-bottom: 10px;
+}
+
+#page4 .grid-item p {
+    font-size: 1rem;
+    color: #666;
+}
+/* 第五頁樣式 */
+#page5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#page5 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden; /* 防止容器橫向滾動 */
+}
+
+#page5 .title {
+    font-size: 2.5rem; /* 增大標題字體 */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#page5 .intro-text {
+    font-size: 1.2rem; /* 增大介紹文字字體 */
+    color: #666;
+    margin-bottom: 40px;
+}
+
+#page5 .video-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#page5 .video-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+}
+
+#page5 .video-item video {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#page5 .text-box {
+    flex: 1;
+    font-size: 1.2rem;
+    text-align: left;
+}
+/* 第六頁樣式 */
+#page6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* 使背景图相对于页面定位 */
+    min-height: 100vh; /* 确保页面占满整个视口 */
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('底圖2.jpg') center/cover no-repeat;
+    /* 使用线性渐变和背景图片实现半透明效果 */
+}
+
+#page6 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* 确保内容在背景图上方显示 */
+    z-index: 1; /* 确保内容在背景图上方显示 */
+}
+
+#page6 .achievement-title {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#page6 .main-title {
+    font-size: 2.5rem; /* 增大標題字體 */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#page6 .intro-text {
+    font-size: 1.2rem; /* 增大介紹文字字體 */
+    color: #666;
+    margin-bottom: 40px;
+}
+
+#page6 .stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#page6 .stat-item {
+    text-align: center;
+}
+
+#page6 .stat-item h2 {
+    font-size: 2.5rem; /* 增大統計數字字體 */
+    color: #4a4ae9;
+    margin-bottom: 10px;
+}
+
+#page6 .stat-item p {
+    font-size: 1.2rem; /* 增大統計文字字體 */
+    color: #666;
+}
+/* 第七頁樣式 */
+#page7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#page7 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#page7 .content {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#page7 .image-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+#page7 .image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#page7 .text-content {
+    flex: 2;
+    padding-left: 20px;
+}
+
+#page7 .section-title {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#page7 .main-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#page7 .intro-text {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+#page7 .benefits-list {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#page7 .benefits-list li {
+    margin-bottom: 30px;
+}
+
+#page7 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a4ae9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+@keyframes fadeInBg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 1024px) {
+    .section {
+        flex-direction: column;
+    }
+    
+    .text-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    #page4 .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    #page5 .video-item {
+        width: 150px; /* 縮小視頻項目寬度 */
+    }
+
+    #page6 .stats-container {
+        flex-direction: column; /* 使統計數據垂直排列 */
+        align-items: flex-start;
+    }
+
+    #page6 .stat-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #page7 .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #page7 .image-container {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #page7 .text-content {
+        padding-left: 0;
+    }
+
+    /* 修改文字大小 */
+    #page7 .section-title {
+        font-size: 1.2rem;
+    }
+
+    #page7 .main-title {
+        font-size: 2rem;
+    }
+
+    #page7 .intro-text {
+        font-size: 1rem;
+    }
+
+    #page7 .benefits-list {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+    #page1 .content {
+        flex-direction: column; /* 確保內容是垂直排列 */
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .content {
+        padding: 10px;
+        width: 90%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    #page2 .content {
+        flex-direction: column;
+    }
+    
+    .text-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .image-container {
+        width: 100%;
+    }
+    #page4 .grid-container {
+        grid-template-columns: 1fr;
+    }
+    #page5 .video-item {
+        flex-direction: row; /* 保持视频和文本水平排列 */
+        align-items: flex-start;
+    }
+
+    #page5 .video-item video {
+        width: 50%; /* 在小屏幕上，视频宽度调整为50% */
+        max-width: 200px; /* 限制视频最大宽度 */
+    }
+
+    #page5 .text-box {
+        flex: 1;
+        width: 50%; /* 在小屏幕上，文本框宽度调整为50% */
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    #page6 .container {
+        padding: 10px;
+    }
+
+    #page6 .main-title {
+        font-size: 1.5rem; /* 縮小標題字體 */
+    }
+
+    #page6 .intro-text {
+        font-size: 0.9rem; /* 縮小介紹文字字體 */
+    }
+
+    #page6 .stats-container {
+        flex-direction: column; /* 使統計數據垂直排列 */
+        align-items: center;
+    }
+
+    #page6 .stat-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #page6 .stat-item h2 {
+        font-size: 1.5rem; /* 縮小統計數字字體 */
+    }
+
+    #page6 .stat-item p {
+        font-size: 0.9rem; /* 縮小統計文字字體 */
+    }
+    #page7 .container {
+        padding: 10px;
+    }
+
+    #page7 .section-title {
+        font-size: 1rem;
+    }
+
+    #page7 .main-title {
+        font-size: 1.5rem;
+    }
+
+    #page7 .intro-text {
+        font-size: 0.9rem;
+    }
+
+    #page7 .benefits-list {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 480px) {
+    #page5 .title {
+        font-size: 2rem;
+    }
+
+    #page5 .intro-text {
+        font-size: 1rem;
+    }
+
+    #page5 .text-box {
+        font-size: 0.9rem;
+    }
+
+    #page5 .video-item {
+        flex-direction: column; /* 在小屏幕上，视频和文本水平排列 */
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #page5 .video-item video {
+        width: 50%; /* 视频宽度调整为40% */
+        max-width: 150px; /* 限制视频最大宽度 */
+    }
+
+    #page5 .text-box {
+        width: 100%; /* 文本框宽度调整为55% */
+        text-align: left; /* 确保文本左对齐 */
+        background: rgba(255, 255, 255, 0.8); /* 添加半透明背景 */
+        padding: 10px;
+        margin-top: 0; /* 取消顶部间距 */
+        border-radius: 5px; /* 增加圆角 */
+    }
+}
